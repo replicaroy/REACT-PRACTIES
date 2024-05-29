@@ -10,6 +10,8 @@ const Form = () => {
     }
     const [formdata, setFormdata] = useState(formObj)
     const [data, setData] = useState([])
+    const [editing, setEditing] = useState(false)
+    const [updateid, setUpdateid] =  useState()
 
     const HandleForm = (e) => {
         const { name, value } = e.target;
@@ -19,23 +21,32 @@ const Form = () => {
        }))       
     }    
     
-    const FormHandler = (e) => {
+    const formSubmit =  (e) => {
         e.preventDefault()
-        setFormdata(formObj)
-        postData()
+        if(editing){
+          updateData()  
         getData()
-        console.log(data);     
-    }
-
+        }
+        else{
+          postData()   
+        getData()
+        }        
+        setFormdata(formObj)
+        getData()
+       setEditing(false)   
+          }
+    
+// get data from server-------------------------->
     const getData = async() =>{
         try {
             let res = await axios.get('http://localhost:8080/data')
             setData(res.data)    
-           await remove()              
+           await remove()    
+           updateData()          
         } catch (error) {            
         }
     }
-
+// post data to server-------------------------->
     const postData = async() =>{
         try {
             let res = await axios.post('http://localhost:8080/data',formdata)
@@ -44,13 +55,28 @@ const Form = () => {
         }
     }
 
+    // remove data-------------------------->
     const remove = async (id) => {
         await axios.delete(`http://localhost:8080/data/${id}`)
-  
+        getData()  
     }
+
+    // edit data-------------------------->
     const edit = (id) => {
-        alert(id)
+        const selecteditid =  data.find((ele)=> ele.id === id)  
+        setFormdata(selecteditid)
+        setEditing(true)
+        setUpdateid(id)
     }
+   
+    // updateData ----------------------------------------->>>>>>
+    const updateData =  async() => {
+      let res = await axios.patch(`http://localhost:8080/data/${updateid}`,formdata)
+    }
+   
+
+    // side effet handle through use-effect-------------------------->
+
     useEffect(() => {
         getData();
       }, []);
@@ -61,7 +87,7 @@ const Form = () => {
   return (
     <div className='parent-div'> 
         <div className="form-container">
-            <form action="" onSubmit={FormHandler}>
+            <form action="" onSubmit={formSubmit}>
                 <div className="form-control">
                     <label htmlFor="firstname">FirstName</label>
                     <input type="text" name='firstname' id='firstname' value={formdata.firstname} onChange={HandleForm} required />
@@ -93,8 +119,9 @@ const Form = () => {
                 borderRadius: "10px",
                 color: "white",
               }}
-            >       
-            Submit      
+            >      
+            {editing? 'Update' : 'Submit'} 
+               
             </button>
           </div>
                
@@ -125,7 +152,7 @@ const Form = () => {
             {/* map table data */}
             {data.map((ele, i) => (
               <tr
-                key={i}
+                key={i} 
                 style={{ background: (i + 1) % 2 === 0 ? "#eee" : "white" }}
               >
                 <td style={{ padding: "15px" }}>{i + 1}</td>

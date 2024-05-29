@@ -68,7 +68,6 @@ outline: none;
   );
   border-radius: 5px;
   color: white; font-size: 16px;
-  /* font-weight: bold; */
   transition: 0.5s;
   background-size: 200% auto;
   letter-spacing: 1px;
@@ -110,6 +109,6 @@ outline: none;
   text-decoration: none;
 } 
 .table-div{
-  padding: 50px; width:75%; margin: auto;
+  padding: 50px; width:70%; margin: auto;
 }
 
