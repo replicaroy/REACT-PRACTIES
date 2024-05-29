@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+section {
+  background: black;
+  padding: 0 4%;
+}
+.hero-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+.image-div {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.image-div h2 {
+  margin-top: -30px;
+  font-weight: bolder;
+  font-size: 45px;
+  color: orange;
+}
+
+.hero-one,
+.hero-two {
+  width: 100%;
+}
+.hero-two {
+  position: relative;
+}
+.hero-two img {
+  width: 100%;
+  min-width: 600px;
+  height: auto;
+}
+.slogan {
+  margin-top: 70px;
+  max-width: 400px;
+}
+.slogan h1 {
+  color: white;
+  font-size: 70px;
+  line-height: -100px;
+  text-transform: uppercase;
+}
+.slogan p {
+  color: white;
+  font-weight: bolder;
+  font-size: 17px;
+}
+.span-h1 {
+  color: #b42793;
+}
+.hero-one p {
+  color: white;
+}
+.hero-one .button-div {
+  display: flex;
+  margin-top: 50px;
+}
+.btn {
+  color: white;
+  padding: 5px 50px;
+  background: #0e6adb;
+  margin: 0 10px;
+  font-size: 30px;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+.btn-one {
+  border: 12px solid #0e6adb;
+}
+.btn-two {
+  border: 12px solid #023f8b;
+  background-color: white;
+  color: black;
+}
+.lecture-img {
+  position: absolute;
+  top: 42%;
+  right: 68%;
+  width: 40%;
+}
+.lecture-img img {
+  width: 100%;
+ 
+}
+.center-word-div {
+  padding: 50px;
+  text-align: center;
+}
+.center-word-div p {
+  color: white;
+  font-weight: bolder;
+  font-size: 16px;
+}
+.logos-div {
+  display: flex;
+  justify-content: space-evenly;
+  background: white;
+  /* padding: 0 100px; */
+  gap: 50px;
+}
+.logo {
+  padding: 70px 20px;
+}
+.logo img {
+  width: 100%;
+  height: 70px;
+}
+.speakers {
+  padding: 100px 10px 20px 10px;
+  text-align: center;
+}
+.speakers h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.speakers p {
+  color: white;
+  font-size: 17px;
+}
+.user-section {
+  display: grid;
+  gap: 100px 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  padding: 50px 80px 100px 80px;
+  gap: 70px;
+  place-items: center;
+}
+.user-section .user-div {
+  width: 300px;
+}
+.user-section .user-div img {
+  width: 100%;
+}
+.user-div h3,
+p {
+  text-transform: uppercase;
+  color: white;
+}
+.user-div h3 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.user-div .span-h3 {
+  color: #b42793;
+}
+.connect {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  background: rgb(222, 222, 222);
+  padding: 50px 0 30px 0;
+}
+.connect h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(49, 49, 49);
+}
+.connect p {
+  text-transform: capitalize;
+  color: rgb(40, 40, 40);
+}
+
+.input-div {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  padding: 30px 0 50px 0;
+}
+.input-div input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid gray;
+  border: none;
+  border-radius: 7px 0 0 7px;
+}
+.input-div input:focus {
+  outline: none;
+}
+.input-div button {
+  color: white;
+  padding: 10px 20px;
+  background-color: black;
+  border: 2px solid transparent;
+  color: white;
+  font-size: 17px;
+  font-weight: bolder;
+  border-radius: 0 7px 7px 0;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .foot-one {
+  background: rgb(8, 62, 137);
+  width: 30%;
+  display: grid;
+  place-items: center;
+}
+.footer .foot-one h2 {
+  background: rgb(249, 127, 12);
+  display: grid;
+  place-items: center;
+  width: 130px;
+  font-size: 40px;
+  font-weight: bolder;
+  border-radius: 10px;
+  aspect-ratio: 1;
+  color: white;
+}
+.footer .foot-one p {
+  margin-top: -80px;
+  font-size: 25px;
+  font-weight: boler;
+  border: none;
+  border-radius: 40px;
+  padding: 15px;
+  color: rgb(239, 237, 237);
+  background: rgb(51, 88, 211);
+}
+.footer .foot-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  background: rgb(51, 88, 211);
+  width: 70%;
+  padding: 50px;
+  gap: 30px;
+}
+.footer .foot-two .foot-c {
+}
+.footer .foot-two h3 {
+  color: rgb(200, 197, 197);
+}
+.footer .foot-two h2 {
+  margin-top: 12px;
+  font-size: 16px;
+}
+.footer .foot-two p {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(211, 210, 210);
+}
+
+/* MEDIA QUERIES 760- 1200///////------------------------------------////////// */
+
+@media (max-width: 1200px) and (min-width: 760px) {
+  .hero-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .image-div {  
+    margin-top: -50px;
+  }
+  .image-div img {
+    width: 130px; 
+  }
+  .image-div h2 {
+    
+  }
+  .hero-one {
+    display: flex; 
+    margin-top: 20px;
+
+  }
+  .hero-two {
+    position: absolute;
+    width: 30%;
+    top: 30%;
+    left: 0;
+  }
+  .hero-two img {
+    width: 100%;
+    height: 600px;
+  }
+  .slogan {    
+    text-align: none;
+    margin-top: 0;
+   width: 100%;
+  }
+  .slogan h1 {   
+    text-align: center;
+    width: 150%;
+    font-size: 35px;   
+  }
+  .slogan p {  
+    font-size: 15px;
+  }
+  .slogan p {
+    display: none;
+  }
+
+  .lecture-img {
+    position: absolute;
+    display: block;
+    top: 20%;
+    left: 20%;
+    width: 400px  
+    height: 100px; 
+  }
+  .lecture-img img {
+    position: absolute;
+    display: block;
+    top: 20%;
+    left: 20%;
+    width: 400px;  
+    height: 300px; 
+  }
+
+  .speakers {
+    padding: 50px 10px 20px 10px;
+    text-align: center;
+  }
+  .speakers h2 {
+    font-size: 30px;
+  }
+  .speakers p {
+    font-size: 14px;
+  }
+  .user-section {
+    gap: 50px 0;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px 50px 100px 10px;
+    gap: 4%;
+  }
+  .user-section .user-div {
+    width: 210px;
+  }
+  .user-div h3,
+  p {
+    text-transform: uppercase;
+    color: white;
+  }
+  .user-div h3 {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+  .user-div .span-h3 {
+    color: #b42793;
+  }
+  .input-div {
+    width: 70%;
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .footer .foot-one {
+    width: 100%;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .foot-two {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+  }
+  .footer .foot-one h2 {
+    width: 80px;
+    font-size: 26px;
+    margin: 30px 0;
+  }
+  .footer .foot-one p {
+    margin-top: 0;
+    font-size: 17px;
+    border-radius: 40px;
+    padding: 10px 16px;
+  }
+  .footer .foot-one p {
+  }
+}
