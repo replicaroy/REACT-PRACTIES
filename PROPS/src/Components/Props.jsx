@@ -32,7 +32,7 @@ function Props({ data }) {
             <div className="details-parent">     
             <div className="details">
               {/* Ensure ele.name is a string and slice is called correctly */}
-              <p>{ele.name ? ele.name.slice(0, 30) : "No Name"}</p>
+              <p>{ele.name ? ele.name.slice(0, 30) : "Printed Short"}</p>
               <div className="price-rating">
                 <h4>
                   {" "}

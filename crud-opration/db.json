@@ -1,11 +1,46 @@
 {
   "data": [
     {
-      "id": "ed36",
-      "firstname": "Ramu",
+      "id": "c1eb",
+      "firstname": "fjgr",
+      "lastname": "jjk",
+      "rating": "4",
+      "price": "100"
+    },
+    {
+      "id": "4993",
+      "firstname": "ramu",
       "lastname": "singh",
-      "email": "psuedodementia@gmail.com",
-      "password": "weryytrtyewtyyuilytrew"
+      "rating": "4.8",
+      "price": "75"
+    },
+    {
+      "id": "4f7c",
+      "firstname": "sun",
+      "lastname": "deep",
+      "rating": "3",
+      "price": "65"
+    },
+    {
+      "id": "2560",
+      "firstname": "deep",
+      "lastname": "s",
+      "rating": "2",
+      "price": "55"
+    },
+    {
+      "id": "8d91",
+      "firstname": "kul",
+      "lastname": "deep",
+      "rating": "3.5",
+      "price": "45"
+    },
+    {
+      "id": "9a14",
+      "firstname": "shm",
+      "lastname": "s",
+      "rating": "4.5",
+      "price": "35"
     }
   ]
 }
