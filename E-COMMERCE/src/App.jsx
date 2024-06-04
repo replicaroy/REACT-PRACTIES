@@ -1,15 +1,12 @@
 import { useState } from 'react'
+import {  } from "react-router-dom";
 import './App.css'
 
 function App() {
-  const [] = useState(0)
 
   return (
     <>
-    <div className="nvbar">
-      
-    </div>
-    
+
     </>
   )
 }

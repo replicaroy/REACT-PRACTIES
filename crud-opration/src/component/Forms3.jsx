@@ -14,7 +14,7 @@ const Forms3 = () => {
   const [data, setData] = useState([]);
   const [alldata, setAlldata]= useState([]);
   const [editing, setEditing] = useState();
-  const [searchvalue, setSearchvalue] = useState([])
+  const [search, setSearch] = useState([])
 
   const formControl = (e) => {
     const { name, value } = e.target;
@@ -86,16 +86,22 @@ const Forms3 = () => {
      setAlldata(data)
    }
 
+  //  SEARCH-DATA
    const handlesearch = (e) => {
-    const value = e.target.value.toLowerCase();
-    setSearchvalue(value);
-    Search(value);
-  };
+    const value = e.target.value
+    setSearch(value)    
+    SearchData(value)
+   }
   
-  const Search = (value) => {
-    const searchdata = data.filter((ele) => ele.firstname.toLowerCase().includes(value));
-    setAlldata(searchdata);
-  };
+   const SearchData =  (value)=>{
+    if(value === ''){
+      setAlldata(data)
+    }
+    else {
+      let filtersearch = alldata.filter((ele)=> ele.firstname.toLowerCase().includes(value))
+      setAlldata(filtersearch)
+    }
+   }
 
   useEffect(() => {   
     getData();
@@ -117,7 +123,7 @@ const Forms3 = () => {
 
       <div className="search" style={{display:'flex',  flexDirection: 'column', padding: '20px 20px', width: '30%'}}>
         <label htmlFor="Search">Search</label>
-        <input type="text" name="search" id="search" value={searchvalue} style={{padding: '10px 20px'}} onChange={handlesearch}  /> 
+        <input type="text" name="search" id="search" value={search} style={{padding: '10px 20px'}} onChange={handlesearch}  /> 
       </div>
       <div
         className="main"
@@ -222,3 +228,28 @@ const Forms3 = () => {
 };
 
 export default Forms3;
+
+
+
+     //  const handlesearch = (e) => {
+  //   setSearchvalue(e.target.value)
+  //   console.log(searchvalue);
+  //   Search(searchvalue)
+  //  }
+ 
+  //  const Search = (searchvalue) => {
+  //   const seardata = alldata.filter((item)=> item.firstname.toLowerCase().includes(searchvalue))
+  //   setAlldata(seardata)
+  //   console.log(seardata);
+  //  }
+
+  //  const handlesearch = (e) => {
+  //   const value = e.target.value.toLowerCase();
+  //   setSearchvalue(value);
+  //   Search(value);
+  // };
+  
+  // const Search = (value) => {
+  //   const searchdata = data.filter((ele) => ele.firstname.toLowerCase().includes(value));
+  //   setAlldata(searchdata);
+  // };
