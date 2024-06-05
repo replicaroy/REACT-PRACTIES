@@ -112,3 +112,10 @@ outline: none;
   padding: 50px; width:70%; margin: auto;
 }
 
+
+
+/* Tailwind for forms3 */
+.form-group input {
+  @apply border;
+  /* display: flex; flex-direction: column; */
+}
