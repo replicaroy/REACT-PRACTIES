@@ -11,7 +11,8 @@ const FormObj = {
 }
 const Forms3 = () => {
 const [formdata, setFormdata] = useState(FormObj)  // state for form data--
-const [data, setdata] = useState(FormObj)  // state for form data--
+const [data, setdata] = useState([])  // state for form data--
+const[edit, setEdit] = useState()
 
 // get Form-data value from input--
 const HandleForm = (e) => {
@@ -23,26 +24,67 @@ const HandleForm = (e) => {
 // Form-submit--
 const HandleSubmit = async (e) => {
   e.preventDefault()
-  console.log(formdata);
-  await postData()
+  if(edit){
+   await UpdateData(edit)
+  }
+  else{
+    await postData()
+  }
   setFormdata(FormObj)
+  getData()
+  // setEdit(null)
 }
 
 // Post data to db.json --
 const postData =  async () =>{
-  await axios.post('http://localhost:4000/data',formdata)
+  try {    
+    await axios.post('http://localhost:4000/data',formdata)
+  } catch (error) {
+    
+  }
 }
 
 // Get data to db.json --
 const getData =  async () =>{
- let res = await axios.get('http://localhost:4000/data')
- setdata(res.data)
- console.log(setdata);
+  try {
+    let res = await axios.get('http://localhost:4000/data')
+    setdata(res.data)
+    await DeleteData()
+  } catch (error) {
+    
+  }
 }
 
+// Delete function --
+const DeleteData = async (id) => {
+  try {
+  await axios.delete(`http://localhost:4000/data/${id}`)    
+  getData()
+  } catch (error) {
+    
+  }
+}
+
+//Edit function --
+const EditData = (id) => {
+  let selectedEditId = data.find((ele)=> ele.id === id)
+  console.log(selectedEditId);
+  setFormdata(selectedEditId)
+  setEdit(id)
+}
+
+// Update Data after editing --
+const UpdateData = async (id) => {
+  await axios.patch(`http://localhost:4000/data/${id}`,formdata)
+
+}
+
+
+
+
 useEffect(()=> {
-  
-})
+  getData()
+},[])
 
   return (
     <div>
@@ -77,6 +119,39 @@ useEffect(()=> {
           </form>
         </div>
       </div>
+
+      
+<table>
+  <tr>
+    <th>In</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Actions</th>
+  </tr>
+{
+  data.map((item, index)=> {
+    return(
+  <tr key={item.id} style={{background: (index+1)%2 === 0 ? '#eee' : 'white'}}>
+    <td>{index+1}</td>
+    <td>{item.firstname}</td>
+    <td>{item.lastname}</td>
+    <td>{item.email}</td>
+    <td>{item.password}</td> 
+    <td><div className="btn-div flex gap-10 justify-center ">
+      <button className="btnn px-4 py-1 bg-green-600 text-white rounded-sm" onClick={()=> EditData(item.id)}>Edit</button>
+      <button className="btnn btnn px-4 py-1 bg-red-500 text-white rounded-sm" onClick={()=> DeleteData(item.id)}>Delete</button>
+      </div></td> 
+  </tr>  
+
+    )
+  })
+}
+
+</table>
+
+
     </div>
   )
 }
@@ -93,7 +168,7 @@ export default Forms3
 
 
 
-
+// style={{ background: (index + 1) % 2 === 0 ? 'red' : 'gray' }}
 
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
