@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 0 5px #c1c0c0;
+  }
+  .navitems {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 10%;
+    align-items: center;
+  }
+  .navmenu ul {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+  }
+  .navmenu ul li {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+  }
+  .new-student button {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    background: rgb(154, 79, 25);
+    color: white;
+  }
+  .new-student button i {
+    font-size: 25px;
+    margin-right: 10px;
+  }

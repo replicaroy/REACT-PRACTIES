@@ -35,6 +35,7 @@ function Navbar() {
           </li>
           <li>
             <Link to="/Girls" className={isActive('/Girls')}>Girls</Link>
+            
           </li>
           <li>
             <Link to="/Kids" className={isActive('/Kids')}>Kids</Link>
