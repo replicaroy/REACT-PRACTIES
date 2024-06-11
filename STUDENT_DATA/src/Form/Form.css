@@ -1,0 +1,134 @@
+.form-container {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(216, 214, 214);
+  border-radius: 10px;
+  margin: auto;
+  margin: 50px 10%;
+  padding: 40px;
+  gap: 50px;
+  display: flex;
+}
+.form {
+  width: 30%;
+  margin-top: 25px;
+}
+.form .submit-btn {
+  text-align: center;
+}
+.form h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: gray;
+  font-weight: 400;
+  color: #0071f2;
+}
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-container input {
+  border: 1px solid rgb(189, 187, 187);
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  outline: none;
+  color: rgb(108, 108, 108);
+}
+.form-container select {
+  border: 1px solid rgb(183, 180, 180);
+  width: 100%;
+  padding: 12px;
+  padding-right: 20px;
+  border-radius: 5px;
+  color: rgb(141, 140, 140);
+  outline: none;
+}
+.form-container select option {
+  border: 1px solid rgb(205, 204, 204); 
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(1, 17, 87);
+  width: 100%;
+}
+
+.sub-btn {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(1, 17, 87);
+  text-align: center;
+  background-color: #0071f2;
+  color: white;
+}
+
+.table {
+  width: 70%;
+  min-width: 400px;
+}
+.table h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: -12px;
+  text-transform: uppercase;
+  color: gray;
+  font-weight: 400;
+  color: #0071f2;
+}
+table th {
+  font-weight: 500;
+}
+table {
+  width: 100%;
+  margin-top: 30px;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+}
+table th {
+  background: #59a3f6;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 12px;
+  font-size: 14px;
+}
+table td {
+  text-align: center;
+  padding: 8px;
+  font-weight: 300;
+}
+table td:nth-child(2),
+table td:nth-child(3) {
+  text-align: left;
+  padding-left: 5px;
+}
+table tr:nth-child(even) {
+  background: #eee;
+}
+.Action-btn-div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.Action-btn-div .btn:nth-child(1) {
+  background: rgba(0, 128, 0, 0.718);
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 30px;
+  border-radius: 5px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+.Action-btn-div .btn:nth-child(2) {
+  background: rgba(255, 0, 0, 0.81);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+}

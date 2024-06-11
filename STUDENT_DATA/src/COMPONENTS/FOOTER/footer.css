@@ -1,0 +1,24 @@
+.footer-container{
+    margin-top: 200px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, auto)); 
+    padding: 50px 100px; box-shadow: 0 0 5px gray;
+      justify-content: space-evenly; gap: 50px; background-color: #0E1120; color: white;
+     
+}
+.foot-one{
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, auto));  max-width: 800px; gap: 80px;
+}
+.events h1{
+    font-size: 20px; cursor: pointer; margin-bottom: 10px; text-transform: uppercase; font-weight: 200;
+}
+.events p{
+    font-size: 16px; cursor: pointer; font-weight: 200; margin-top: 5px;
+}
+.events p:hover{
+   color: rgb(243, 243, 250);
+   transform: translateY(-2px);
+   transition: .2s ease;
+}
+.foot-two{
+    background: green; width: 400px;
+}
