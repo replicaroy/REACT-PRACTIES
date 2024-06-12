@@ -1,0 +1,22 @@
+.hero{
+    max-height: 50vh; margin-top: 100px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, auto)); place-items: center;
+    padding: 0 100px;
+}
+.caption{
+   display: flex; flex-direction: column; gap: 20px; color: rgb(71, 70, 70); 
+}
+.caption h1{
+   font-size: 25px; font-weight: 500;
+}
+.school{
+    color: #0071F2;text-transform: uppercase;
+}
+.caption h3{
+    font-size: 22px; font-weight: 500;
+ }
+ .caption h4{
+    font-size: 17px; font-weight: 500;
+ }
+.hero img{
+   max-height: 50vh; margin-top: -100px;
+}

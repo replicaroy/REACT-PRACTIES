@@ -3,7 +3,7 @@ import "remixicon/fonts/remixicon.css";
 
 const Navbar = () => {
   return (
-    <div className=" w-full h-20 bg-white px-24 shadow fixed">
+    <div className=" w-full h-20 bg-white px-24 shadow fixed top-0 left-0" >
       <div className="navitem  flex justify-between  items-center">
         <div className="logo">
           <img

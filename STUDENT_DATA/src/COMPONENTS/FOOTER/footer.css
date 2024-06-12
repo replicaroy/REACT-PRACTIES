@@ -20,5 +20,24 @@
    transition: .2s ease;
 }
 .foot-two{
-    background: green; width: 400px;
+    width: 400px; display: flex; flex-direction: column; gap: 20px;
+}
+.foot-two h1{
+    font-size: 20px; font-weight: 200; 
+}
+.social i{
+     font-size: 22px; margin: 15px; cursor: pointer;
+}
+.social i:hover{
+    transform: translateY(-2px); transition: .2s ease; color: red;
+
+}
+.connect{
+    display: flex; gap: 20px;
+}
+.connect input {
+    width: 250px; padding: 5px; border-radius: 5px; cursor: pointer;
+}
+.connect button {
+   padding: 5px 10px; background: rgb(17, 122, 234); color: rgb(0, 0, 0); border-radius: 5px;
 }
