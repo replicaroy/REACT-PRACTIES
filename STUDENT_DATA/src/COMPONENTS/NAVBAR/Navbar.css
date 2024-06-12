@@ -1,0 +1,44 @@
+.navbar {
+    padding: 0 10%;
+}
+
+.menu {
+    opacity: 0;
+    cursor: pointer;
+}
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 1020px) {
+    .navbar {
+        padding: 0 3%;
+    }
+}
+
+@media (max-width: 769px) {
+    .navlink {
+        position: absolute; 
+        top: 80px; 
+        right: -100%; 
+        height: 500px; 
+        background: red;  
+        width: 80%;
+        transition: right 0.3s ease-in-out;
+    }
+    .navlink.open {
+        right: 0; /* Change from -100% to 0 when menu is open */
+    }
+    .navlink ul {
+        display: flex; 
+        flex-direction: column; 
+        gap: 30px; 
+        padding: 30px 30px; 
+        text-align: center;
+    }
+    .menu {
+        opacity: 1;
+    }
+}

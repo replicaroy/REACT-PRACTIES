@@ -112,7 +112,7 @@ const Form = () => {
             <tr>
               <th>Sr.</th>
               <th>Name</th>
-              <th>Father Name</th>
+              {/* <th>Father Name</th> */}
               <th>Course</th>
               <th>Contact</th>
               <th>Action</th>
@@ -124,7 +124,7 @@ const Form = () => {
               <tr key={student.id}>
                 <td>{index + 1}</td>
                 <td>{student.name}</td>
-                <td>{student.fname}</td>
+                {/* <td>{student.fname}</td> */}
                 <td>{student.subject}</td>
                 <td>{student.phone}</td>
                 <td>

@@ -1,43 +1,88 @@
-.footer-container{
-    margin-top: 200px;
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, auto)); 
-    padding: 50px 100px; box-shadow: 0 0 5px gray;
-      justify-content: space-evenly; gap: 50px; background-color: #0E1120; color: white;
-     
+.footer-container {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  padding: 50px 100px;
+  box-shadow: 0 0 5px gray;
+  justify-content: space-evenly;
+  gap: 50px;
+  background-color: #0e1120;
+  color: white;
 }
-.foot-one{
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, auto));  max-width: 800px; gap: 80px;
+.foot-one {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  max-width: 800px;
+  gap: 80px;
 }
-.events h1{
-    font-size: 20px; cursor: pointer; margin-bottom: 10px; text-transform: uppercase; font-weight: 200;
+.events h1 {
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 200;
 }
-.events p{
-    font-size: 16px; cursor: pointer; font-weight: 200; margin-top: 5px;
+.events p {
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 200;
+  margin-top: 5px;
 }
-.events p:hover{
-   color: rgb(243, 243, 250);
-   transform: translateY(-2px);
-   transition: .2s ease;
+.events p:hover {
+  color: rgb(243, 243, 250);
+  transform: translateY(-2px);
+  transition: 0.2s ease;
 }
-.foot-two{
-    width: 400px; display: flex; flex-direction: column; gap: 20px;
+.foot-two {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.foot-two h1{
-    font-size: 20px; font-weight: 200; 
+.foot-two h1 {
+  font-size: 20px;
+  font-weight: 200;
 }
-.social i{
-     font-size: 22px; margin: 15px; cursor: pointer;
+.social i {
+  font-size: 22px;
+  margin: 15px;
+  cursor: pointer;
 }
-.social i:hover{
-    transform: translateY(-2px); transition: .2s ease; color: red;
-
+.social i:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+  color: red;
 }
-.connect{
-    display: flex; gap: 20px;
+.connect {
+  display: flex;
+  gap: 20px;
 }
 .connect input {
-    width: 250px; padding: 5px; border-radius: 5px; cursor: pointer;
+  width: 240px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .connect button {
-   padding: 5px 10px; background: rgb(17, 122, 234); color: rgb(0, 0, 0); border-radius: 5px;
+  padding: 5px 10px;
+  background: rgb(17, 122, 234);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+@media (max-width: 1200px) {
+    .footer-container { 
+        padding: 50px 70px;        
+      }
+}
+
+@media (max-width: 1020px) {
+    .footer-container { 
+        padding: 50px 50px;        
+      }
+}
+
+@media (max-width: 769px) {
+    .footer-container { 
+        padding: 50px 10px;        
+      }
 }
