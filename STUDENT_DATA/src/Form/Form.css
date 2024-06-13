@@ -11,6 +11,7 @@
 .form {
   width: 100%;
   margin-top: 25px;
+  padding: 0 50px;
 }
 .form .submit-btn {
   text-align: center;
@@ -33,7 +34,7 @@
 .form-container input {
   border: 1px solid rgb(189, 187, 187);
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   border-radius: 5px;
   outline: none;
   color: rgb(108, 108, 108);
@@ -41,7 +42,7 @@
 .form-container select {
   border: 1px solid rgb(183, 180, 180);
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   padding-right: 20px;
   border-radius: 5px;
   color: rgb(141, 140, 140);
@@ -58,11 +59,11 @@
 .sub-btn {
   border: none;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   color: rgb(1, 17, 87);
   text-align: center;
-  background-color: #0071f2;
+  background-color: #000810;
   color: white;
 }
 
@@ -77,7 +78,7 @@
   text-transform: uppercase;
   color: gray;
   font-weight: 400;
-  color: #0071f2;
+  color:indigo;
 }
 table th {
   font-weight: 500;
@@ -89,7 +90,7 @@ table {
   border-collapse: collapse;
 }
 table th {
-  background: #59a3f6;
+  background: indigo;
   color: white;
   text-transform: uppercase;
   font-weight: 500;
@@ -115,9 +116,11 @@ table tr:nth-child(even) {
   gap: 10px;
 }
 .Action-btn-div .btn:nth-child(1) {
-  background: rgba(0, 128, 0, 0.718);
+  background: rgba(87, 214, 87, 0.718);
   border: none;
-  color: white;
+  /* border: 1px solid rgb(214, 213, 213); */
+  box-shadow:  0 0 5px rgb(174, 174, 174);
+  color: rgb(0, 0, 0);
   font-size: 20px;
   margin-right: 30px;
   border-radius: 5px;
@@ -125,9 +128,11 @@ table tr:nth-child(even) {
   border-radius: 5px;
 }
 .Action-btn-div .btn:nth-child(2) {
-  background: rgba(255, 0, 0, 0.81);
+  background: rgba(232, 28, 28, 0.81);
+  box-shadow:  0 0 5px rgb(174, 174, 174);
+
   border: none;
-  color: white;
+  color: rgb(8, 8, 8);
   font-size: 20px;
   padding: 0 10px;
   border-radius: 5px;
@@ -135,17 +140,24 @@ table tr:nth-child(even) {
 
 @media (max-width: 1200px) {
   .form-container {margin: 50px 5%;}
-
+  .form {
+    padding: 0 30px;
+  }
 }
 
 @media (max-width: 1020px) {
   .form-container {margin: 50px 3%;}
-
+  .form {
+    padding: 0 20px;
+  }
  
 }
 
 @media (max-width: 769px) {
   .form-container {  padding: 5px;;}
+  .form {
+    padding: 0 10px;
+  }
 
   .table h1 {
     font-size: 16px; 
@@ -182,24 +194,7 @@ table tr:nth-child(even) {
     justify-content: center;
     gap: 2px;
   }
-  .Action-btn-div .btn:nth-child(1) {
-    background: rgba(0, 128, 0, 0.718);
-    border: none;
-    color: white;
-    font-size: 15px;
-    margin-right: 20px;
-    border-radius: 5px;
-    padding: 0 10px;
-    border-radius: 5px;
-  }
-  .Action-btn-div .btn:nth-child(2) {
-    background: rgba(255, 0, 0, 0.81);
-    border: none;
-    color: white;
-    font-size: 15px;
-    padding: 0 10px;
-    border-radius: 5px;
-  }
+
 
 
 

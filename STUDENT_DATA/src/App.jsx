@@ -4,12 +4,14 @@ import Navbar from "./COMPONENTS/NAVBAR/Navbar";
 import Hero from "./COMPONENTS/HERO/Hero";
 import Form from "./Form/Form";
 import Footer from "./COMPONENTS/FOOTER/Footer";
+import Carousal from "./COMPONENTS/Carousal/Carousal";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Carousal/>
+      {/* <Hero /> */}
       <Form />
       <Footer />
     </>

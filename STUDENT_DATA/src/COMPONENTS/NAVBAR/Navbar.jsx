@@ -12,12 +12,13 @@ const Navbar = () => {
   return (
     <div className="navbar w-full h-20 bg-white shadow fixed top-0 left-0">
       <div className="navitem flex justify-between items-center">
-        <div className="logo">
+        <div className="logo flex items-center text-3xl">
           <img
             src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-school-logo-png-image_6851480.png"
             alt="school logo"
             style={{ width: 70 }}
           />
+          <h1 style={{marginLeft: 10, fontWeight: 'bold', color: 'indigo'}} >B.I.S. School</h1>
         </div>
         <div className={`navlink 2xl:w-5/12 xl:w-6/12 lg:w-7/12 md:w-8/12 ${menuOpen ? 'open' : ''}`}>
           <ul className="flex justify-between text-xl text-gray-800">

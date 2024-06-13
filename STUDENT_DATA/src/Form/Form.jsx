@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
 
 const StudentObject = {
   name: "",
@@ -27,16 +28,15 @@ const Form = () => {
   const HandleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.fname || !form.subject || !form.phone) {
-      alert("Please fill all fields");
+      toast.error("Please fill all fields");
       return;
     }
     if (edit) {
       await UpdateData(edit); 
-      alert('Student Data edited Successfully')
+      toast.success('Student Data edited Successfully')
     } else {
       await postData(); 
-      alert('Student Data submitted Successfully')
-
+      toast.success('Student Data submitted Successfully')
     }
     setForm(StudentObject);
     setEdit(null);
@@ -72,6 +72,7 @@ const Form = () => {
     try {
       await axios.delete(`https://render-json-server-a4l5.onrender.com/studends/${id}` );
       await getData(); 
+      toast.success('Data deleted')
     } catch (error) {
       console.error("Something Error", error);
     }
@@ -144,7 +145,7 @@ const Form = () => {
       </div>
 
       <div className="form">
-        <h1 style={{ color: edit ? 'lightseagreen' : '#0071f2' }}>  {edit? 'Edit Student': 'Student Registration' } </h1>
+        <h1 style={{ color: edit ? 'lightseagreen' : 'indigo' }}>  {edit? 'Edit Student': 'Student Registration' } </h1>
         <form onSubmit={HandleSubmit}>
           <div className="input-area">
             <div className="form-control">
@@ -191,7 +192,7 @@ const Form = () => {
               />
             </div>
             <div className="form-control">
-              <button type="submit" className="sub-btn"   style={{ background: edit ? 'lightseagreen' : '#0071f2' }}  >
+              <button type="submit" className="sub-btn"   style={{ background: edit ? 'lightseagreen' : 'indigo' }}  >
                 {edit !== null ? "Update" : "Submit"}
               </button>
             </div>

@@ -5,6 +5,7 @@ import Shodata from "./Shodata";
 import Form from "./Form";
 import Ceckboxes from "./Ceckboxes";
 import Multiforminput from "./Multiforminput";
+import Useref from "./Useref";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <Shodata/> */}
       {/* <Form /> */}
       {/* <Ceckboxes/> */}
-      <Multiforminput/>
+      {/* <Multiforminput/> */}
+      <Useref/>
     </>
   );
 }
