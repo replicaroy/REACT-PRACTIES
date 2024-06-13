@@ -145,7 +145,7 @@ const Form = () => {
       </div>
 
       <div className="form">
-        <h1 style={{ color: edit ? 'lightseagreen' : 'indigo' }}>  {edit? 'Edit Student': 'Student Registration' } </h1>
+        <h1 style={{ color: edit ? 'lightseagreen' : 'rgb(19, 18, 18)' }}>  {edit? 'Edit Student': 'Student Registration' } </h1>
         <form onSubmit={HandleSubmit}>
           <div className="input-area">
             <div className="form-control">
@@ -192,7 +192,7 @@ const Form = () => {
               />
             </div>
             <div className="form-control">
-              <button type="submit" className="sub-btn"   style={{ background: edit ? 'lightseagreen' : 'indigo' }}  >
+              <button type="submit" className="sub-btn"   style={{ background: edit ? 'lightseagreen' : 'rgb(19, 18, 18)' }}  >
                 {edit !== null ? "Update" : "Submit"}
               </button>
             </div>

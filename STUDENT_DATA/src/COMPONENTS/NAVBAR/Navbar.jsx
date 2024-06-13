@@ -18,7 +18,7 @@ const Navbar = () => {
             alt="school logo"
             style={{ width: 70 }}
           />
-          <h1 style={{marginLeft: 10, fontWeight: 'bold', color: 'indigo'}} >B.I.S. School</h1>
+          <h1 style={{marginLeft: 10, fontWeight: 'bold', color: 'rgb(19, 18, 18)'}} >B.I.S. School</h1>
         </div>
         <div className={`navlink 2xl:w-5/12 xl:w-6/12 lg:w-7/12 md:w-8/12 ${menuOpen ? 'open' : ''}`}>
           <ul className="flex justify-between text-xl text-gray-800">

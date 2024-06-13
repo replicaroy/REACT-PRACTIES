@@ -61,10 +61,12 @@
   width: 100%;
   padding: 15px;
   border-radius: 5px;
-  color: rgb(1, 17, 87);
+  /* color: rgb(1, 17, 87); */
   text-align: center;
   background-color: #000810;
   color: white;
+  box-shadow:  0 0 3px rgb(11, 11, 11);
+
 }
 
 .table {
@@ -78,7 +80,7 @@
   text-transform: uppercase;
   color: gray;
   font-weight: 400;
-  color:indigo;
+  color:rgb(2, 2, 2);
 }
 table th {
   font-weight: 500;
@@ -88,19 +90,20 @@ table {
   margin-top: 30px;
   border: 1px solid #eee;
   border-collapse: collapse;
+  
 }
 table th {
-  background: indigo;
+  background: rgb(19, 18, 18);
   color: white;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   padding: 12px;
   font-size: 14px;
 }
 table td {
   text-align: center;
-  padding: 8px;
-  font-weight: 300;
+  padding: 10px 8px;
+  font-weight: 400;
 }
 table td:nth-child(2),
 table td:nth-child(3) {
@@ -116,7 +119,7 @@ table tr:nth-child(even) {
   gap: 10px;
 }
 .Action-btn-div .btn:nth-child(1) {
-  background: rgba(87, 214, 87, 0.718);
+  background: rgba(189, 244, 189, 0.718);
   border: none;
   /* border: 1px solid rgb(214, 213, 213); */
   box-shadow:  0 0 5px rgb(174, 174, 174);
@@ -128,7 +131,7 @@ table tr:nth-child(even) {
   border-radius: 5px;
 }
 .Action-btn-div .btn:nth-child(2) {
-  background: rgba(232, 28, 28, 0.81);
+  background: rgba(241, 168, 168, 0.81);
   box-shadow:  0 0 5px rgb(174, 174, 174);
 
   border: none;
