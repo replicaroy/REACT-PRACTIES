@@ -161,9 +161,7 @@ a:focus {
 .love i {
   font-weight: 100;
 }
-.img-div:hover.love {
 
- }
 .love i:hover {
   color: rgb(155, 62, 62);
 }
@@ -209,10 +207,8 @@ a:focus {
   margin-bottom: 5px;
   overflow: hidden;
   transition: all .5s ease;
+}
 
-}
-.item-div:hover .btn-div{
-}
 .btn-div button {
   width: 100%;
   padding: 10px;
@@ -229,7 +225,6 @@ a:focus {
   
 }
 .btn-div button:nth-child(1) {
-  /* background: #b5b4b4; */
   color: rgb(121, 121, 121);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 24px;
 
@@ -244,7 +239,6 @@ a:focus {
 .btn-div button:nth-child(2) {
   background: #1D2C36;
   color: rgb(227, 227, 227);
-    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
 
 }
 .btn-div button:nth-child(2):hover {
